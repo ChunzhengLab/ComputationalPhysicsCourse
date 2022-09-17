@@ -29,7 +29,6 @@ void AitkenMethod::GetDiffTable(void) {
     }
   }
 }
-
 double AitkenMethod::GetResult() {
   GetDiffTable();
   return result;
