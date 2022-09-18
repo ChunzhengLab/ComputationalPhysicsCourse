@@ -27,4 +27,5 @@
 
 程序说明
 
-C++语法, 可利用g++编译. main函数中设置已知函数点,$x$,精度$\epsilon$, 算法封装入AitkenMethod.
+C++语法, 可利用g++编译.
+main函数中设置已知函数点, $x$,精度 $\epsilon$, 算法封装入AitkenMethod.
