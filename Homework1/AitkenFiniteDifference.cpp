@@ -8,6 +8,7 @@ void AitkenMethod::SetXList(vector<double> x_in) { xList.assign(x_in.begin(), x_
 void AitkenMethod::SetYList(vector<double> y_in) { yList.assign(y_in.begin(), y_in.end()); }
 void AitkenMethod::GetDiffTable(void) {
   size_t size = xList.size();
+  bool returnflag = false;
   for (size_t j = 1; j < size; j++) {
     P[0][j] = yList[0] * (x - xList[j]) / (xList[0] - xList[j]) + yList[j] * (x - xList[0]) / (xList[j] - xList[0]);
     //cout<< P[0][j] <<endl;
@@ -22,12 +23,12 @@ void AitkenMethod::GetDiffTable(void) {
       //cout << P[i][j] << endl;
       if (j > i + 1 && abs(P[i][j] - P[i][j - 1]) < error) {
         this->result = P[i][j];
+        returnflag = true;
         return;
-      } else {
-        cout << "The precision cannot be reached!" << endl;
       }
     }
   }
+  if(returnflag == false) cout<<"The precision cannot be reached."<<endl;
 }
 double AitkenMethod::GetResult() {
   GetDiffTable();

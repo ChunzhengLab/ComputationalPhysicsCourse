@@ -15,8 +15,8 @@ int main() {
   yList.push_back(0.49311);
   yList.push_back(0.58813);
   yList.push_back(0.68122);
-  double x = 0.462;
-  double error = 0.00001;
+  double x = 0.512;
+  double error = 0.0001;
 
   AitkenMethod aitkenMethod;
   aitkenMethod.SetX(x);
