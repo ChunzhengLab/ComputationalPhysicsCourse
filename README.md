@@ -1,2 +1,2 @@
 # ComputationalPhysicsCourse
-复旦大学王月霞教授计算物理课程作业
+复旦大学现代物理研究所王月霞教授计算物理课程作业
